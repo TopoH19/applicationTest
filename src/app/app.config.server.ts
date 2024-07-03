@@ -8,7 +8,7 @@ const serverConfig: ApplicationConfig = {
     provideServerRendering()
   ]
 };
-
+//import httpclientmodule
 NgModule({
   imports:[
     HttpClientModule,
