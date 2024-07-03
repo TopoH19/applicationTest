@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HttpClient} from '@angular/common/http';
+import { subscribe } from 'diagnostics_channel';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +11,16 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  data: any [] = [];
   title = 'applicationTest';
+  //creación del constructor para leer los datos de la API
+  constructor(private http : HttpClient){ }
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.http.get('')// colocar la api
+    .subscribe((data: any) => {
+      this.data = data;
+    })
+  }
 }
