@@ -1,12 +1,36 @@
 <div class="wrapper">
-  <div class="gallery">
-    <div class="item" *ngFor="let item of data">   
-      <h1> <!--title --> 
-        {{item.name}}
-      </h1>
-      <p>
-        {{item.description}}
-      </p>
-    </div>
-  </div>
+  <input type="search" ngModel="search" value="Search User">
+  <button ng-click="search()">Search</button>
+  <br><br>
+  <br><br>
+  <form>
+    First Name: <input type="text" ng-model="firstname" required>
+    <br><br>
+    Last Name: <input type="text" ng-model="lastname" required>
+    <br><br>
+    Email: <input type="email" ngModel="email" required>
+    <br><br>
+    Phone Number: <input type="tel" ngModel="Phone" required>
+    <br><br>
+    Select a Gender:
+      <select ng-model="Gender" required>
+      <option value="">
+      <option value="Male">Male
+      <option value="Female">Female
+      <option value="Enby">Enby
+  </select>
+  <br><br>
+  Bith Date: <input type="date" ngModel="Birth Date" required>
+  <br><br>
+  Marital Status:
+  <input type="radio" ng-model="Status" value="Single">Single
+  <input type="radio" ng-model="Status" value="Marriage">Marriage
+  <input type="radio" ng-model="Status" value="Divorced">Divorced
+  <input type="radio" ng-model="Status" value="Separated">Separated
+  <br><br>
+  <button ng-click="save()">Save</button>
+  <button ng-click="clear()">Clear</button>
+  <button ng-click="Update()"disabled="disabled">Update</button>
+  </form>
+
 </div>
