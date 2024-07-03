@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HttpClient} from '@angular/common/http';
 import { subscribe } from 'diagnostics_channel';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -24,5 +25,5 @@ export class AppComponent {
       this.data = data;
     })
   }
-  
+
 }
